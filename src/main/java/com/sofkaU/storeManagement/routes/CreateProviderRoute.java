@@ -30,17 +30,17 @@ public class CreateProviderRoute {
             beanClass = CreateProviderUseCase.class,
             beanMethod = "apply",
             operation = @Operation(
-                    operationId = "insertRecipe",
+                    operationId = "createProvider",
                     responses = {
                     @ApiResponse(
                             responseCode = "201",
-                            description = "successful operation",
+                            description = "Successful operation",
                             content = @Content(schema = @Schema(implementation = ProviderDto.class))),
                     @ApiResponse(
                             responseCode = "400",
-                            description = "Invalid Recipe details supplied")
-                    }
-                    , requestBody = @RequestBody(content = @Content(schema = @Schema(implementation = ProviderDto.class)))
+                            description = "Invalid provider information")
+                    },
+                    requestBody = @RequestBody(content = @Content(schema = @Schema(implementation = ProviderDto.class)))
             ))
 
     public RouterFunction<ServerResponse> createProviderRouter(CreateProviderUseCase createProviderUseCase){
