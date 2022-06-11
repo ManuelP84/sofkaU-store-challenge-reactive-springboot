@@ -1,9 +1,7 @@
 package com.sofkaU.storeManagement.routes;
 
 import com.sofkaU.storeManagement.dto.ProductDto;
-import com.sofkaU.storeManagement.dto.ProviderDto;
 import com.sofkaU.storeManagement.usecases.GetAllProductsUseCase;
-import com.sofkaU.storeManagement.usecases.GetAllProvidersUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -26,7 +24,8 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class GetAllProductsRoute {
 
     @Bean
-    @RouterOperation(path = "/v1/api/get/products", produces = {
+    @RouterOperation(path = "/v1/api/get/products",
+            produces = {
             MediaType.APPLICATION_JSON_VALUE},
             beanClass = GetAllProductsUseCase.class,
             method = RequestMethod.GET, beanMethod = "get",

@@ -19,7 +19,6 @@ public class CreateProductUseCase implements Function<ProductDto, Mono<ProductDt
 
     @Override
     public Mono<ProductDto> apply(ProductDto productDto) {
-
         return productRepository
                 .save(productMapper
                         .convertDtoToEntity()

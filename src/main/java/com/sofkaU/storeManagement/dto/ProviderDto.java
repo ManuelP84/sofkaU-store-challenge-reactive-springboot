@@ -4,12 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProviderDto {
 
-    private String id;
+    private String id; // = UUID.randomUUID().toString().substring(0, 5);
 
     private String nit;
 
@@ -17,7 +19,7 @@ public class ProviderDto {
 
     private String phone;
 
-    private String address;
+    private String email;
 
     private String note;
 }

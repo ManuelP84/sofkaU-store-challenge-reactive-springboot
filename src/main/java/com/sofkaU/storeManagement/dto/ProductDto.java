@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
 import java.util.List;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
@@ -14,7 +15,7 @@ import java.util.List;
 public class ProductDto {
 
     @Id
-    private String id;
+    private String id; // = UUID.randomUUID().toString().substring(0, 5);
 
     private String name;
 
@@ -26,6 +27,8 @@ public class ProductDto {
 
     private Integer quantity;
 
-    private String providerNit;
+    private Double price;
+
+    private ProviderDto provider;
 
 }
