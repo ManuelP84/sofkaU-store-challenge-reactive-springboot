@@ -17,5 +17,7 @@ public class BillDto {
 
     private String sellerName;
 
+    private Double paid;
+
     private List<ProductItem> products;
 }

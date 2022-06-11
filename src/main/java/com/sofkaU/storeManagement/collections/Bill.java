@@ -24,5 +24,7 @@ public class Bill {
 
     private String sellerName;
 
+    private Double paid;
+
     private List<ProductItem> products;
 }
