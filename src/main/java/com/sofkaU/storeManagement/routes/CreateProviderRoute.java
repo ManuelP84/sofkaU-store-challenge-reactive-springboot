@@ -48,7 +48,7 @@ public class CreateProviderRoute {
                     POST("/v1/api/save/provider/").and(accept(MediaType.APPLICATION_JSON)),
                     request -> request
                             .bodyToMono(ProviderDto.class)
-                            .flatMap(providerDto -> createProviderUseCase.apply(providerDto))
+                            .flatMap(createProviderUseCase::apply)
                             .flatMap(providerDto -> ServerResponse.status(HttpStatus.CREATED)
                                     .contentType(MediaType.APPLICATION_JSON)
                                     .bodyValue(providerDto))
