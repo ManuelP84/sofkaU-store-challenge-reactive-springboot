@@ -14,4 +14,6 @@ public class ProductItem {
     private Double price;
 
     private Double subTotal;
+
+    private Integer balance;
 }
