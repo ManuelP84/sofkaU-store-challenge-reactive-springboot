@@ -11,7 +11,7 @@ public class BillDto {
 
     private String id;
 
-    private LocalDate date;
+    private LocalDate date = LocalDate.now();
 
     private String customerName;
 
@@ -19,5 +19,5 @@ public class BillDto {
 
     private Double paid;
 
-    private List<ProductItem> products;
+    private List<ProductItem> items;
 }

@@ -26,5 +26,5 @@ public class Bill {
 
     private Double paid;
 
-    private List<ProductItem> products;
+    private List<ProductItem> items;
 }
