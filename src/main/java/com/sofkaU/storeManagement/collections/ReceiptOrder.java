@@ -1,5 +1,6 @@
 package com.sofkaU.storeManagement.collections;
 
+import com.sofkaU.storeManagement.dto.ProductDto;
 import com.sofkaU.storeManagement.dto.ProviderDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,6 +9,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -18,11 +20,9 @@ public class ReceiptOrder {
     @Id
     private String id;
 
-    private ProviderDto provider;
+    private ProductDto product;
 
-    private String productId;
+    private Integer quantityAdded;
 
-    private Integer quantity;
-
-    private LocalDate date;
+    private LocalDate date = LocalDate.now();
 }

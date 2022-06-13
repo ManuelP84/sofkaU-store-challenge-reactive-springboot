@@ -1,5 +1,6 @@
 package com.sofkaU.storeManagement.dto;
 
+import com.sofkaU.storeManagement.collections.Product;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,11 +14,9 @@ public class ReceiptOrderDto {
 
     private String id;
 
-    private ProviderDto provider;
+    private ProductDto product;
 
-    private String productId;
+    private Integer quantityAdded;
 
-    private Integer quantity;
-
-    private LocalDate date;
+    private LocalDate date = LocalDate.now();
 }
